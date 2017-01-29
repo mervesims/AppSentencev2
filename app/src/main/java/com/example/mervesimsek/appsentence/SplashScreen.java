@@ -1,7 +1,9 @@
 package com.example.mervesimsek.appsentence;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.PixelFormat;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Window;
@@ -9,8 +11,11 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 public class SplashScreen extends AppCompatActivity {
+    final Context context = this;
 
     public void onAttachedToWindow() {
         super.onAttachedToWindow();
@@ -24,11 +29,21 @@ public class SplashScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
         StartAnimations();
+
+        //Font düzenlemesi için burayı incele http://stackoverflow.com/questions/34572810/how-to-change-default-font-of-the-android-app
+        TextView textView = (TextView) findViewById(R.id.textView2);
+
+
+
+        Typeface font = Typeface.createFromAsset(context.getAssets(),"fonts/neuropol.ttf");
+        textView.setTypeface(font);
+
+
     }
     private void StartAnimations() {
         Animation anim = AnimationUtils.loadAnimation(this, R.anim.alpha);
         anim.reset();
-        LinearLayout l=(LinearLayout) findViewById(R.id.rel_lay);
+        RelativeLayout l=(RelativeLayout) findViewById(R.id.rel_lay);
         l.clearAnimation();
         l.startAnimation(anim);
 
