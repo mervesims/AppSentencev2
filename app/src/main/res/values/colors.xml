@@ -4,4 +4,94 @@
     <color name="colorPrimaryDark">#1f253d</color>
     <color name="colorAccent">#1f253d</color>
     <color name="white">#ffffff</color>
+
+
+    <color name="randomcyan">#00BCD4</color>
+    <color name="randomred">#F44336</color>
+    <color name="randompink">#E91E63</color>
+    <color name="randompurple">#9C27B0</color>
+    <color name="randomdeeppurple">#673AB7</color>
+    <color name="randomindigo">#3F51B5</color>
+    <color name="randomblue">#2196F3</color>
+    <color name="randomlightblue">#03A9F4</color>
+    <color name="randomteal">#009688</color>
+    <color name="randomgreen">#4CAF50</color>
+    <color name="randomlightgreen">#8BC34A</color>
+    <color name="randomlime">#CDDC39</color>
+    <color name="randomyellow">#FFEB3B</color>
+    <color name="randomamber">#FFC107</color>
+    <color name="randomorange">#FF9800</color>
+    <color name="randomdeeporange">#FF5722</color>
+    <color name="randombrown">#795548</color>
+    <color name="randomgrey">#9E9E9E</color>
+    <color name="randombluegrey">#607D8B</color>
+    <color name="navbar">#263238</color>
+
+
+    <color name="randomcyan2">#B2EBF2</color>
+    <color name="randomred2">#FFCDD2</color>
+    <color name="randompink2">#F8BBD0</color>
+    <color name="randompurple2">#E1BEE7</color>
+    <color name="randomdeeppurple2">#D1C4E9</color>
+    <color name="randomindigo2">#C5CAE9</color>
+    <color name="randomblue2">#bbdefb</color>
+    <color name="randomlightblue2">#B3E5FC</color>
+    <color name="randomteal2">#B2DFDB</color>
+    <color name="randomgreen2">#C8E6C9</color>
+    <color name="randomlightgreen2">#DCEDC8</color>
+    <color name="randomlime2">#F0F4C3</color>
+    <color name="randomyellow2">#FFF9C4</color>
+    <color name="randomamber2">#FFECB3</color>
+    <color name="randomorange2">#FFE0B2</color>
+    <color name="randomdeeporange2">#FFCCBC</color>
+    <color name="randombrown2">#D7CCC8</color>
+    <color name="randomgrey2">#F5F5F5</color>
+    <color name="randombluegrey2">#CFD8DC</color>
+
+    <array name="active">
+        <item>@color/randomcyan</item>
+        <item>@color/randomred</item>
+        <item>@color/randompink</item>
+        <item>@color/randompurple</item>
+        <item>@color/randomdeeppurple</item>
+        <item>@color/randomindigo</item>
+        <item>@color/randomblue</item>
+        <item>@color/randomlightblue</item>
+        <item>@color/randomteal</item>
+        <item>@color/randomgreen</item>
+        <item>@color/randomlightgreen</item>
+        <item>@color/randomlime</item>
+        <item>@color/randomyellow</item>
+        <item>@color/randomamber</item>
+        <item>@color/randomorange</item>
+        <item>@color/randomdeeporange</item>
+        <item>@color/randombrown</item>
+        <item>@color/randomgrey</item>
+        <item>@color/randombluegrey</item>
+    </array>
+
+
+    <array name="inactive">
+        <item>@color/randomcyan2</item>
+        <item>@color/randomred2</item>
+        <item>@color/randompink2</item>
+        <item>@color/randompurple2</item>
+        <item>@color/randomdeeppurple2</item>
+        <item>@color/randomindigo2</item>
+        <item>@color/randomblue2</item>
+        <item>@color/randomlightblue2</item>
+        <item>@color/randomteal2</item>
+        <item>@color/randomgreen2</item>
+        <item>@color/randomlightgreen2</item>
+        <item>@color/randomlime2</item>
+        <item>@color/randomyellow2</item>
+        <item>@color/randomamber2</item>
+        <item>@color/randomorange2</item>
+        <item>@color/randomdeeporange2</item>
+        <item>@color/randombrown2</item>
+        <item>@color/randomgrey2</item>
+        <item>@color/randombluegrey2</item>
+    </array>
+
+
 </resources>
