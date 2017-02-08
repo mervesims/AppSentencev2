@@ -121,13 +121,17 @@ public class MainActivity extends AppCompatActivity
             startActivity(intent);
             finish();
         } else if (id == R.id.nav_slideshow) {
-            Intent intent=new Intent(this,CategoryActivity.class);
-            startActivity(intent);
-            finish();
+
 
         } else if (id == R.id.nav_manage) {
 
         } else if (id == R.id.nav_share) {
+            String message = "Share AppSentence";
+            Intent share = new Intent(Intent.ACTION_SEND);
+            share.setType("text/plain");
+            share.putExtra(Intent.EXTRA_TEXT, message);
+
+            startActivity(Intent.createChooser(share, "Title of the dialog the system will open"));
 
         } else if (id == R.id.nav_send) {
 

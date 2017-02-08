@@ -14,13 +14,6 @@
         android:layout_height="wrap_content"
         android:theme="@style/AppBarOverlay">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/colorPrimary"
-            app:popupTheme="@style/PopupOverlay" />
-
     </android.support.design.widget.AppBarLayout>
 
 
@@ -36,14 +29,51 @@
         app:backgroundTint="@color/colorPrimary"
         android:tint="@color/white" />
 
-    <Button
-        android:layout_width="54dp"
-        android:layout_height="wrap_content"
-        android:onClick="ReturnHome"
-        android:background="?android:attr/actionModeCloseDrawable"
-        android:elevation="0dp"
-        android:backgroundTint="?android:attr/colorLongPressedHighlight"
-        android:id="@+id/btnreturn" />
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="511dp"
+        android:layout_marginTop="58dp"
+        android:id="@+id/swipeLay"
+        >
+
+        <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="511dp"
+        android:layout_marginTop="58dp">
+
+
+
+
+        <TextView
+            android:text="T"
+            android:textColor="@color/colorPrimary"
+            android:textSize="50sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Random"
+            app:layout_anchorGravity="center_vertical|center_horizontal"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="72dp"
+            android:textStyle="bold"
+            android:paddingEnd="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingStart="10dp" />
+            <!--Padding sağdan soldan üstten alttan boşluk bırakmaya yarar. -->
+    </RelativeLayout>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:popupTheme="@style/PopupOverlay" />
 
 
 </android.support.design.widget.CoordinatorLayout>
