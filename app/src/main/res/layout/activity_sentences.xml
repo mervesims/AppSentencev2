@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/swipeLay"
+    >
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/activity_sentences"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -6,6 +12,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+    android:layout_marginTop="59dp"
     tools:context="com.example.mervesimsek.appsentence.SentencesActivity">
 
 
@@ -29,44 +36,6 @@
         app:backgroundTint="@color/colorPrimary"
         android:tint="@color/white" />
 
-    <android.support.v4.widget.SwipeRefreshLayout
-        android:layout_width="match_parent"
-        android:layout_height="511dp"
-        android:layout_marginTop="58dp"
-        android:id="@+id/swipeLay"
-        >
-
-        <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="511dp"
-        android:layout_marginTop="58dp">
-
-
-
-
-        <TextView
-            android:text="T"
-            android:textColor="@color/colorPrimary"
-            android:textSize="50sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/Random"
-            app:layout_anchorGravity="center_vertical|center_horizontal"
-            android:layout_gravity="bottom|center_horizontal"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="55dp"
-            android:layout_marginTop="72dp"
-            android:textStyle="bold"
-            android:paddingEnd="10dp"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:paddingStart="10dp" />
-            <!--Padding sağdan soldan üstten alttan boşluk bırakmaya yarar. -->
-    </RelativeLayout>
-
-    </android.support.v4.widget.SwipeRefreshLayout>
-
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
@@ -76,4 +45,52 @@
         app:popupTheme="@style/PopupOverlay" />
 
 
+
+
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="162dp"
+        android:id="@+id/card_view"
+        android:layout_marginTop="59dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="3dp"
+        app:contentPadding="4dp"
+        app:cardBackgroundColor="@color/randomcyan"
+        android:clickable="true"
+        app:contentPaddingTop="2dp">
+
+        <RelativeLayout
+            android:layout_width="371dp"
+            android:layout_height="match_parent"
+            android:padding="16dp">
+
+
+            <TextView
+                android:text="T"
+                android:textColor="@color/colorPrimary"
+                android:textSize="40sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Random"
+                app:layout_anchorGravity="center_vertical|center_horizontal"
+                android:layout_gravity="bottom|center_horizontal"
+                android:textStyle="bold"
+                android:paddingEnd="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingStart="10dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="96dp" />
+            <!--Padding sağdan soldan üstten alttan boşluk bırakmaya yarar. -->
+
+
+
+    </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
 </android.support.design.widget.CoordinatorLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

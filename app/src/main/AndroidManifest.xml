@@ -4,7 +4,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/circle"
+        android:icon="@drawable/circleshape"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
@@ -23,6 +23,7 @@
             android:name=".SentencesActivity"
             android:label="@string/title_activity_sentences"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
+
     </application>
 
 </manifest>
