@@ -1,13 +1,17 @@
 package com.example.mervesimsek.appsentence;
 
+import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
+import android.content.res.Resources;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.graphics.drawable.DrawableCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -18,14 +22,21 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.SearchView;
 import android.widget.TextView;
+
 import java.util.Random;
 
 
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.graphics.PorterDuffXfermode;
+import android.graphics.Rect;
+import android.graphics.RectF;
+import android.graphics.Bitmap.Config;
+import android.graphics.PorterDuff.Mode;
+
 public class SentencesActivity extends MainActivity {
     ArrayAdapter<String> adapter;
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,14 +44,13 @@ public class SentencesActivity extends MainActivity {
         setContentView(R.layout.activity_sentences);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentback = new Intent(SentencesActivity.this,MainActivity.class);
+                Intent intentback = new Intent(SentencesActivity.this, MainActivity.class);
                 startActivity(intentback);
                 finish();
             }
@@ -48,11 +58,12 @@ public class SentencesActivity extends MainActivity {
 
 
 
-        /** Refresh and Random Color*/
 
-        final SwipeRefreshLayout swipeRefreshLayout = (SwipeRefreshLayout)findViewById(R.id.swipeLay);
-        final TextView textView = (TextView)findViewById(R.id.Random);
-        swipeRefreshLayout.setColorSchemeResources(R.color.randomamber,R.color.randomblue,R.color.randomdeeppurple);
+ /** Refresh and Random Color*/
+
+        final SwipeRefreshLayout swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipeLay);
+        final ImageView imageView = (ImageView) findViewById(R.id.circle_title);
+        swipeRefreshLayout.setColorSchemeResources(R.color.randomamber, R.color.randomblue, R.color.randomdeeppurple);
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
@@ -63,11 +74,10 @@ public class SentencesActivity extends MainActivity {
                         swipeRefreshLayout.setRefreshing(false);
                         Random random = new Random();
                         int color = Color.argb(255, random.nextInt(256), random.nextInt(256), random.nextInt(256));
-                        textView.setBackgroundColor(color);
+                        imageView.setBackgroundColor(color);
                     }
-                },3000);
+                }, 3000);
             }
-
 
 
         });
@@ -84,19 +94,18 @@ public class SentencesActivity extends MainActivity {
 
     }
 
-            /** Search */
+    /**
+     * Search
+     */
     @Override
-    public boolean onCreateOptionsMenu(Menu menu)
-    {
+    public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_search, menu);
         MenuItem item = menu.findItem(R.id.menuSearch);
         SearchView searchView = (SearchView) item.getActionView();
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener()
-        {
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
-            public boolean onQueryTextSubmit(String query)
-            {
+            public boolean onQueryTextSubmit(String query) {
                 return false;
             }
 
@@ -108,7 +117,6 @@ public class SentencesActivity extends MainActivity {
         });
         return super.onCreateOptionsMenu(menu);
     }
-
 
 
 

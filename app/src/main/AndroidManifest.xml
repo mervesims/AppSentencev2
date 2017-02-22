@@ -23,7 +23,10 @@
             android:name=".SentencesActivity"
             android:label="@string/title_activity_sentences"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-
+        <activity
+            android:name=".AddSentenceActivity"
+            android:label="@string/title_activity_hey"
+            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
     </application>
 
 </manifest>
